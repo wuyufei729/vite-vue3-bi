@@ -1,0 +1,379 @@
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,texarea,p,blockquote,th,td{ 
+    margin:0px; 
+    padding:0px; 
+}
+ul{
+    list-style: none;
+}
+
+@color-primary: #01DDFE;
+@color-primary-deep: #0F51AF;
+@color-border: #08687C;
+@color-border-gray: #152A48;
+
+.home-page{
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#46627E 10%, #000F24 80%);;
+    &>header{
+        height: 6%;
+        border-bottom: 1px solid @color-border;
+        box-sizing: border-box;
+        position: relative;
+        &>div{
+            height: 100%;
+        }
+
+        .left{
+            width: 30%;
+            box-sizing: border-box;
+            p{
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                text-indent: 12px;
+            }
+        }
+        .center{
+            position: absolute;
+            width: 360px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid red;
+            box-sizing: border-box;
+            h1{
+                font-size: 40px;
+                background: linear-gradient(to bottom, #76D4FE,#76D4FE, @color-primary-deep);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                text-align: center;
+            }
+        }
+        .right{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+            box-sizing: border-box;
+            .common-btn{
+                margin-left: 20px;
+            }
+        }
+    }
+    &>section{
+        height: 94%;
+        box-sizing: border-box;
+        position: relative;
+        &>.left, &>.right{
+            width: 360px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            border: 1px solid @color-border;
+            box-sizing: border-box;
+            background-image: linear-gradient(45deg, #212121 25%, transparent 0);
+            background-size: 4px 4px;        
+        }
+        &>.left{
+            left: 0;
+        }
+        &>.right{
+            right: 0;
+        }
+    }
+
+}
+
+
+
+
+
+.slide-btn{
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    span{
+        width: 100%;
+        height: 33px;
+        position: absolute;
+        border-right: 1px solid @color-border;
+        top: 4px;
+        right: -1px;
+        line-height: 14px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 3px;
+        box-sizing: border-box;
+    }
+
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px solid @color-border;
+        border-bottom: none;
+        border-right: none;
+        transform: skewY(20deg);
+    }
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px solid @color-border;
+        border-top: none;
+        border-right: none;
+        transform: skewY(-20deg);
+    }
+    
+    &.left{
+        right: -20px;
+    }
+    &.right{
+        left: -20px;
+        &::before{
+            transform: skewY(-20deg);
+            border-left: none;
+        }
+        &::after{
+            transform: skewY(20deg);
+            border-left: none;
+        }
+        span{
+            border-left: 1px solid @color-border;
+            left: 0px;
+        }
+    }
+}
+
+.common-btn{
+    padding: 3px 12px 4px 12px;
+    border: 1px solid @color-primary;
+    border-radius: 4px;
+    color: @color-primary;
+    font-size: 14px;
+    transition: 0.3s;
+    box-sizing: border-box;
+    &:focus{
+        outline: none;
+    }
+    
+    &:hover{
+        background-color: @color-primary;
+        color: white;
+    }
+}
+
+.common-btn-title{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    font-size: 14px;
+    background: linear-gradient(to bottom, #01598C,#034473,#032540);
+    color: @color-primary;
+    text-align: center;
+    box-shadow: 1px 1px 1px @color-border;
+}
+
+
+
+.group-item{
+    width: calc(100% - 24px);
+    margin-left: 12px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 2%;
+}
+
+
+
+.liner-animate-line{
+    margin: 12px 0 0 6px;
+}
+
+.animate-liner-line{
+    margin: 12px 0;
+    height: 2px;
+    width: 100%;
+    background-color: @color-border;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0px;
+        height: 2px;
+        background-color: @color-primary;
+        animation: line-marquee 10s linear infinite;
+    }
+}
+
+@keyframes line-marquee{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+// 设备管理部分
+.device-manager{
+    height: 38%;
+    margin-top: 4%;
+    ul{
+        height: calc(100% - 77px);
+        li{
+            height: 14%;
+            margin-top: 1%;
+            text-indent: 4px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            list-style-type: none;
+            span{
+                color: @color-primary;
+                margin-left: 12px;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(to right, #051E39, #248DD7);
+            }
+            &:nth-of-type(1),&:nth-of-type(6){
+                width: 66%;
+            }
+            &:nth-of-type(2),&:nth-of-type(5){
+                width: 55%;
+            }
+            &:nth-of-type(3){
+                width: 50%;
+            }
+            &:nth-of-type(4){
+                width: 50%;
+            }
+        }
+    }
+    .device-chart-gauge{
+        position: absolute;
+        right: 0;
+        top: 40%;
+        width: 150px;
+        height: 150px;
+    }
+}
+//状态监测部分
+.status-detection{
+    height: 20%;
+    ul{
+        height: calc(100% - 77px);
+        li{
+            height: 40%;
+            text-indent: 4px;
+            width: 50%;
+            float: left;
+            margin-top: 2%;
+            span{
+                display: inline-block;
+                margin-left: 12px;
+                width: 16px;
+                height: 16px;
+                vertical-align: middle;
+                border-radius: 50%;
+                background-color: #64E49A;
+                &.warning{
+                    background-color: #F59D05;
+                }
+                &.error{
+                    background-color: #F73108;
+                }
+            }
+        }
+    }
+}
+
+//视频监控部分
+.video-monitoring{
+    height: 38%;
+    ul{
+        height: calc(100% - 77px);
+        li{
+            height: 50%;
+            width: 50%;
+            float: left;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .video-decoration{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+
+.period-detection{
+    height: 56%;
+    margin-top: 4%;
+    border: 1px solid red;
+    box-sizing: border-box;
+    ul{
+        height: calc(100% - 77px);
+        li{
+            height: 25%;
+            width: 100%;
+            position: relative;
+        }
+    }
+
+    .card-item{
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    .period-chart-gauge{
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 80px;
+        height: 80px;
+    }
+
+    .period-decoration{
+        position: absolute;
+        right: 0;
+        top: 8px;
+    }
+}

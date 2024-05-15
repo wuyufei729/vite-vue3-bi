@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+          "@/*": ["src/*"]
+      },
+
+      "target": "esnext",
+      "useDefineForClassFields": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "strict": true,//这样可以对`this`上的数据属性进行严格的推断，否则总是被视为any类型
+      "jsx": "preserve",
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "esModuleInterop": true,
+      "lib": ["esnext", "dom"],
+      "skipLibCheck": true,
+      "types": [ "vite/client" ],
+      "allowJs": true
+  },
+  // "include": [
+  //     "src/**/*",
+  //     "src/main.d.ts", //**/递归匹配任意子目录
+  //     "src/**/*.ts",
+  //     "src/**/*d.ts",
+
+  // ],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.d.js", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  
+  
+  // "exclude": [
+  //     "node_modules"
+  // ]
+}
