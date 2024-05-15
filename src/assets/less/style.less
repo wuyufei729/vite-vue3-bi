@@ -18,7 +18,7 @@ ul{
     background-image: radial-gradient(#46627E 10%, #000F24 80%);;
     &>header{
         height: 6%;
-        border-bottom: 1px solid @color-border;
+        // border-bottom: 1px solid @color-border;
         box-sizing: border-box;
         position: relative;
         &>div{
@@ -38,14 +38,13 @@ ul{
         }
         .center{
             position: absolute;
-            width: 360px;
+            width: 400px;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            border: 1px solid red;
             box-sizing: border-box;
             h1{
-                font-size: 40px;
+                font-size: 32px;
                 background: linear-gradient(to bottom, #76D4FE,#76D4FE, @color-primary-deep);
                 -webkit-background-clip: text;
                 background-clip: text;
@@ -284,7 +283,7 @@ ul{
     .device-chart-gauge{
         position: absolute;
         right: 0;
-        top: 40%;
+        top: 34%;
         width: 150px;
         height: 150px;
     }
@@ -343,16 +342,18 @@ ul{
 
 
 .period-detection{
-    height: 56%;
+    height: 60%;
     margin-top: 4%;
-    border: 1px solid red;
+    // border: 1px solid red;
     box-sizing: border-box;
     ul{
         height: calc(100% - 77px);
         li{
-            height: 25%;
+            height: 20%;
+            margin-top: 4%;
             width: 100%;
             position: relative;
+            
         }
     }
 
@@ -360,6 +361,18 @@ ul{
         height: 100%;
         width: 100%;
         position: relative;
+        .container{
+            height: 100%;
+            padding-left: 12%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            h4{
+                color: @color-primary;
+            }
+        }
     }
 
     .period-chart-gauge{
@@ -375,5 +388,18 @@ ul{
         position: absolute;
         right: 0;
         top: 8px;
+    }
+
+    
+}
+
+.performance-trends{
+    height: 38%;
+    width: 100%;
+
+    .performance-chart-wrap{
+        height: calc(100% - 77px);
+        width: 100%;
+        box-sizing: border-box;
     }
 }
