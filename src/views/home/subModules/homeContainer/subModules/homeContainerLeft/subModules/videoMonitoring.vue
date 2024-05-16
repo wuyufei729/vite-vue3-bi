@@ -1,7 +1,7 @@
 <template>
     <div class="group-item video-monitoring">
         <h3 class="common-btn-title">视频监控</h3>
-        <dv-decoration1 style="width:100px;height:30px;" class="video-decoration"/>
+        <span class="decoration-arrow" @click="toast"></span>
         <p class="animate-liner-line"></p>
         <ul>
             <li>
@@ -22,5 +22,7 @@
 </template>
 
 <script lang='ts' setup>
-
+const toast = ()=>{
+    window.alert('功能维护中...')
+}
 </script>

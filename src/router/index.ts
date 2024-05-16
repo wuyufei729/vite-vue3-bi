@@ -15,7 +15,7 @@ export const constRoutes: Array<RouteRecordRaw> = [
 
 
 const router = createRouter({
-    history: createWebHistory(), //替代之前的mode，是必须的
+    history: createWebHashHistory(), //替代之前的mode，是必须的
     routes: constRoutes
 });
 

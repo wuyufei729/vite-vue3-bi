@@ -1,9 +1,9 @@
 <template>
     <dv-border-box10 class="card-item">
         <div class="container">
-            <h4>{{props.data.title}}</h4>
-            <p>更新日期：{{props.data.updateTime}}</p>
-            <p>到期日期：{{props.data.expireTime}}</p>
+            <h4>{{props?.data?.title}}</h4>
+            <p>更新日期：{{props?.data?.updateTime}}</p>
+            <p>到期日期：{{props?.data?.expireTime}}</p>
             <dv-charts :option="option" class="period-chart-gauge" />
         </div>
     </dv-border-box10>
@@ -25,7 +25,7 @@ const option = {
             endAngle: Math.PI * 1.5,
             arcLineWidth: 8,
             data: [
-                { name: 'itemA', value: props.data.dayValue, gradient: ['#03c2fd', '#1ed3e5', '#2fded6'] }
+                { name: 'itemA', value: props?.data?.dayValue, gradient: ['#03c2fd', '#1ed3e5', '#2fded6'] }
             ],
             axisLabel: {
                 show: false

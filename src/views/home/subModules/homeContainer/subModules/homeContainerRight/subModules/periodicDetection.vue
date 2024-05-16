@@ -1,7 +1,7 @@
 <template>
     <div class="group-item period-detection">
         <h3 class="common-btn-title">生命周期监测</h3>
-        <dv-decoration3 style="width:100px;height:14px;" class="period-decoration"/>
+        <span class="decoration-arrow" @click="toast"></span>
         <p class="animate-liner-line"></p>
         <ul>
             <li v-for="(item,i) in data.arr" :key="item.title+i">
@@ -48,5 +48,9 @@ data.arr = [
         dayValue: 16
     }
 ]
+
+const toast = ()=>{
+    window.alert('功能维护中...')
+}
 </script>
 

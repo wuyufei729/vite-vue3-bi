@@ -2,7 +2,7 @@
 <template>
     <div class="group-item performance-trends">
         <h3 class="common-btn-title">性能曲线</h3>
-        
+        <span class="decoration-arrow" @click="toast"></span>
         <p class="animate-liner-line"></p>
         <div class="performance-chart-wrap">
             <dv-charts
@@ -15,6 +15,9 @@
 </template>
 
 <script lang='ts' setup>
+const toast = ()=>{
+    window.alert('功能维护中...')
+}
 const option = {
     title: {
         show: false,
