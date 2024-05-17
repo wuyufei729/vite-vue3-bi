@@ -1,6 +1,6 @@
 <template>
     
-    <div class="group-item status-detection">
+    <div class="group-item status-detection" v-loading="isLoading">
         <h3 class="common-btn-title">状态监测</h3>
         <p class="animate-liner-line"></p>
         <ul>
@@ -14,5 +14,6 @@
 </template>
 
 <script lang='ts' setup>
-
+import UseChartHook from '@/hook/chartHook'
+const { isLoading } = UseChartHook('statusDetection');
 </script>

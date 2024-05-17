@@ -11,8 +11,10 @@
   "dependencies": {
     "@kjgl77/datav-vue3": "^1.7.2",
     "axios": "^1.3.4",
+    "element-plus": "^2.2.28",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
+    "mitt": "^3.0.1",
     "pinia": "^2.0.28",
     "pinia-plugin-persistedstate": "^3.1.0",
     "vue": "^3.2.45",

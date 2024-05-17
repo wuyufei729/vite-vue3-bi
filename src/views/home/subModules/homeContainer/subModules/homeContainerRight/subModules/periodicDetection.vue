@@ -1,5 +1,5 @@
 <template>
-    <div class="group-item period-detection">
+    <div class="group-item period-detection" v-loading="isLoading">
         <h3 class="common-btn-title">生命周期监测</h3>
         <span class="decoration-arrow" @click="toast"></span>
         <p class="animate-liner-line"></p>
@@ -17,7 +17,8 @@
 import PeriodCard from '@/components/Card/periodCard.vue'
 import { reactive } from 'vue';
 import { PeriodModel } from '@/interface'
-
+import UseChartHook from '@/hook/chartHook'
+const { isLoading } = UseChartHook('periodicDetection');
 const data = reactive({
     arr: Array<PeriodModel>()
 });

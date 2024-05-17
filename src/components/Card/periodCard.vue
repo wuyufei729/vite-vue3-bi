@@ -21,9 +21,10 @@ const option = {
     series: [
         {
             type: 'gauge',
+            radius: '72%',
             startAngle: -Math.PI / 2,
             endAngle: Math.PI * 1.5,
-            arcLineWidth: 8,
+            arcLineWidth: 10,
             data: [
                 { name: 'itemA', value: props?.data?.dayValue, gradient: ['#03c2fd', '#1ed3e5', '#2fded6'] }
             ],

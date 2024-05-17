@@ -1,6 +1,6 @@
 
 <template>
-    <div class="group-item performance-trends">
+    <div class="group-item performance-trends" v-loading="isLoading">
         <h3 class="common-btn-title">性能曲线</h3>
         <span class="decoration-arrow" @click="toast"></span>
         <p class="animate-liner-line"></p>
@@ -15,6 +15,8 @@
 </template>
 
 <script lang='ts' setup>
+import UseChartHook from '@/hook/chartHook'
+const { isLoading } = UseChartHook('performanceTrends');
 const toast = ()=>{
     window.alert('功能维护中...')
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="group-item video-monitoring">
+    <div class="group-item video-monitoring" v-loading="isLoading">
         <h3 class="common-btn-title">视频监控</h3>
         <span class="decoration-arrow" @click="toast"></span>
         <p class="animate-liner-line"></p>
@@ -22,6 +22,8 @@
 </template>
 
 <script lang='ts' setup>
+import UseChartHook from '@/hook/chartHook'
+const { isLoading } = UseChartHook('videoMonitoring');
 const toast = ()=>{
     window.alert('功能维护中...')
 }

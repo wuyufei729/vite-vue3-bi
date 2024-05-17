@@ -1,5 +1,5 @@
 <template>
-    <div class="group-item device-manager">
+    <div class="group-item device-manager" v-loading="isLoading">
         <h3 class="common-btn-title">设备管理</h3>
         <p class="animate-liner-line"></p>
         <ul>
@@ -15,7 +15,9 @@
 </template>
 
 <script lang='ts' setup>
-import {reactive} from "vue"
+import {reactive, ref} from "vue"
+import UseChartHook from '@/hook/chartHook'
+const { isLoading } = UseChartHook('deviceManager');
 const option = reactive({
     title: {
         text: '设备正常率',
@@ -63,5 +65,7 @@ const option = reactive({
         }
     ]
 })
+
+
 
 </script>
